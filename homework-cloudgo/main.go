@@ -26,10 +26,17 @@ func main() {
 	if len(*pPort) != 0 {
 		port = *pPort
 	}
+<<<<<<< HEAD
 
 	//新建服务
 	app := service.NewApp()
 
+=======
+	
+	//新建服务
+	app := service.NewApp()
+	
+>>>>>>> c4a7558cfc7294299d97797f2b4004549c754c26
 	//服务启动
 	app.Run(iris.Addr(":" + port))
 }
