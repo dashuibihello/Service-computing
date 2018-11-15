@@ -14,6 +14,7 @@ const (
 )
 
 func main() {
+	//如果没有监听到端口，则设为默认端口
 	port := os.Getenv("PORT")
 	if len(port) == 0 {
 		port = PORT
@@ -26,6 +27,9 @@ func main() {
 		port = *pPort
 	}
 	
+	//新建服务
 	app := service.NewApp()
+	
+	//服务启动
 	app.Run(iris.Addr(":" + port))
 }
